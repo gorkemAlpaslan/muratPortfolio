@@ -1,94 +1,71 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import mockImage from "../public/mockImage.jpg";
 
 export default function Home() {
+  let Projects = [
+    {
+      projectName: "Project Name 1",
+      projectImage: mockImage,
+      peojectDescription:
+        "Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. ",
+    },
+    {
+      projectName: "Project Name 2",
+      projectImage: mockImage,
+      peojectDescription:
+        "Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. ",
+    },
+    {
+      projectName: "Project Name 3",
+      projectImage: mockImage,
+      peojectDescription:
+        "Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. ",
+    },
+    {
+      projectName: "Project Name 4",
+      projectImage: mockImage,
+      peojectDescription:
+        "Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. ",
+    },
+    {
+      projectName: "Project Name 5",
+      projectImage: mockImage,
+      peojectDescription:
+        "Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. ",
+    },
+  ];
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main class="PageContainer">
+      <div className="headerWrapper">
+        <div className="logo">Necmettin Murat Tenil</div>
+        <div className="headerNavigationWrapper">
+          <a>Work</a>
+          <a>Resume</a>
+          <a>Contact</a>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="bodyWrapper">
+        <div className="selfDescription">Hello! I’m a Product Designer strongly focused</div>
+        <div className="selfDescription-2">on creating beautiful and functional UI’s.</div>
+        <div class="projects-container">
+          {Projects.map((project, index) => {
+            console.log(project.projectImage);
+            return (
+              <div key={index} class="each-project-wrapper">
+                <div class="each-project-image-wrapper">
+                  <Image className="projectImage" src={project.projectImage} alt="" width={544} height={360} />
+                </div>
+                <div className="projectTitle">{project.projectName}</div>
+                <div className="projectDescription">{project.peojectDescription}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="infoWrapper">
+        <div className="inforMessage">Get in touch</div>
+        <a className="mailWrapper">murattenil@icloud.com</a>
       </div>
     </main>
   );
