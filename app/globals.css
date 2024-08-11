@@ -415,27 +415,8 @@ table {
   .PageContainer .logo {
     font-size: 25px;
   }
-  .selfDescription {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  .selfDescription-2 {
-    margin-bottom: 75px;
-    font-size: 14px;
-  }
-  .projects-container {
-    grid-template-columns: 100%;
-  }
-  .projectTitle {
-    font-size: 23px;
-  }
-  .projectDescription {
-    font-size: 14px;
-  }
-  .each-project-wrapper {
-    margin-bottom: 48px;
-  }
-  .selfDescription-2 {
-    margin-bottom: 48px;
+  .PageContainer {
+    padding: 16px;
+    margin-top: 16px !important;
   }
 }
