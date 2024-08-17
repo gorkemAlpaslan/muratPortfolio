@@ -1,3 +1,11 @@
+@font-face {
+  font-family: helveticaRoman;
+  src: url(../public/fonts/HelveticaNeueRoman.otf);
+}
+@font-face {
+  font-family: helveticaMedium;
+  src: url(../public/fonts/HelveticaNeueMedium.otf);
+}
 html,
 body,
 div,
@@ -136,6 +144,8 @@ table {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  color: #1d1d1f;
+  font-family: helveticaRoman;
 }
 
 .headerWrapper {
@@ -175,11 +185,14 @@ table {
 .name-wrapper {
   font-size: 30px;
   font-weight: 900;
+  font-family: helveticaMedium;
+  color: #1d1d1f;
 }
 
 .field-wrapper {
   font-size: 20px;
   color: #8a8989;
+  font-family: helveticaRoman;
 }
 .bodyWrapper {
   width: 100%;
@@ -189,6 +202,8 @@ table {
 
 .PageContainer .logo {
   font-size: 14px;
+  font-family: helveticaRoman;
+  color: #1d1d1f;
 }
 .headerWrapper {
   display: flex;
